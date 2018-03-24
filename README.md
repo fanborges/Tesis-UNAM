@@ -3,11 +3,26 @@ Tesis UNAM
 
 Plantilla de Tesis en LaTeX para las facultades de la UNAM.
 
+**Adaptación para la Facultad de Estudios Superiores Acatlán**
+
 UNAM's Thesis' LaTeX template.
 
 Based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge (http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/).
 Corrected and extended in 2007 by Jakob Suckale, then MPI-iCBG PhD programme
 and made available through OpenWetWare.org - the free biology wiki. Adapted to UNAM by Jesús Velázquez
+
+
+## Notas de instalación
+
+
+
+
+
+
+
+
+
+
 
 
 Lista de paquetes
@@ -100,4 +115,4 @@ Marca varias advertencias al compilar, varias de ellas tienen que ver con que el
 
 Si les da una advertencia de referencias no definidas, compilen el archivo "tesis.tex" con BibTeX.
 
-Las adevrtencias de fuera de margen son de la portada.
+Las advertencias de fuera de margen son de la portada.

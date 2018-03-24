@@ -14,9 +14,9 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \ifx\pdfoutput\undefined
-   \LoadClass[dvips, a4paper]{book}  % CAMBIAR "a4paper" POR "letterpaper" PARA TAMAÑO CARTA
+\LoadClass[dvips, a4paper]{book}  % CAMBIAR "a4paper" POR "letterpaper" PARA TAMAÑO CARTA
 \else
-   \LoadClass[pdftex, a4paper]{book}
+\LoadClass[pdftex, a4paper]{book}
 \fi
 
 %:------------------------- PAQUETES  -----------------------
@@ -57,10 +57,10 @@
 %{\bfseries\Huge} % por defecto se usarán caracteres de tamaño \Huge en negrita
 {\Huge} % por defecto se usarán caracteres de tamaño \Huge en negrita
 {% contenido de la etiqueta
-\titlerule % línea horizontal
-\filright % texto alineado a la derecha
-\Large\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño \Large en lugar de \Huge
-\Large\thechapter} % número de capítulo en tamaño \Large
+    \titlerule % línea horizontal
+    \filright % texto alineado a la derecha
+    \Large\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño \Large en lugar de \Huge
+    \Large\thechapter} % número de capítulo en tamaño \Large
 {0mm} % espacio mínimo entre etiqueta y cuerpo
 {\filright} % texto del cuerpo alineado a la derecha
 [\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
@@ -99,12 +99,12 @@
 %if you use an older version, uncomment these lines:
 %\newif \ifpdf
 %    \ifx \pdfoutput \undefined
-        % for running latex
+% for running latex
 %        \pdffalse
 %    \else
-        % for running pdflatex
+% for running pdflatex
 %        \pdfoutput = 1    % positive value for a PDF output
-                          % otherwise a DVI
+% otherwise a DVI
 %        \pdftrue
 %\fi
 
@@ -119,48 +119,48 @@
 %--> http://www.uni-giessen.de/partosch/eurotex99/ oberdiek/print/sli4a4col.pdf
 %--> http://me.in-berlin.de/~miwie/tex-refs/html/latex-packages.html
 %-->
-    \usepackage[ pdftex, plainpages = false, pdfpagelabels, 
-                 pdfpagelayout = OneColumn, % display single page, advancing flips the page - Sasa Tomic
-                 bookmarks,
-                 bookmarksopen = true,
-                 bookmarksnumbered = true,
-                 breaklinks = true,
-                 linktocpage,
-                 pagebackref,
-                 colorlinks = true,
-                 linkcolor = blue,
-                 urlcolor  = blue,
-                 citecolor = red,
-                 anchorcolor = green,
-                 hyperindex = true,
-                 hyperfigures
-                 ]{hyperref} 
-    \usepackage[pdftex]{graphicx}
-    \DeclareGraphicsExtensions{.png, .jpg, .pdf}
+\usepackage[ pdftex, plainpages = false, pdfpagelabels, 
+pdfpagelayout = OneColumn, % display single page, advancing flips the page - Sasa Tomic
+bookmarks,
+bookmarksopen = true,
+bookmarksnumbered = true,
+breaklinks = true,
+linktocpage,
+pagebackref,
+colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = red,
+anchorcolor = green,
+hyperindex = true,
+hyperfigures
+]{hyperref} 
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.png, .jpg, .pdf}
 
-    \pdfcompresslevel=9
-    %\graphicspath{{ThesisFigs/PNG/}{ThesisFigs/PDF/}{ThesisFigs/}}
+\pdfcompresslevel=9
+%\graphicspath{{ThesisFigs/PNG/}{ThesisFigs/PDF/}{ThesisFigs/}}
 \else
-    \usepackage[ dvips, 
-                 bookmarks,
-                 bookmarksopen = true,
-                 bookmarksnumbered = true,
-                 breaklinks = true,
-                 linktocpage,
-                 pagebackref,
-                 colorlinks = true,
-                 linkcolor = blue,
-                 urlcolor  = blue,
-                 citecolor = Azul,
-                 anchorcolor = green,
-                 hyperindex = true,
-                 hyperfigures
-                 ]{hyperref}
+\usepackage[ dvips, 
+bookmarks,
+bookmarksopen = true,
+bookmarksnumbered = true,
+breaklinks = true,
+linktocpage,
+pagebackref,
+colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = Azul,
+anchorcolor = green,
+hyperindex = true,
+hyperfigures
+]{hyperref}
 
-    %\usepackage{epsfig}
-    \usepackage{graphicx}
-    \DeclareGraphicsExtensions{.eps, .ps}
-    %\graphicspath{{ThesisFigs/EPS/}{ThesisFigs/}}
+%\usepackage{epsfig}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.eps, .ps}
+%\graphicspath{{ThesisFigs/EPS/}{ThesisFigs/}}
 \fi
 
 
@@ -169,11 +169,11 @@
 
 %A4 settings
 \ifpdf
-   \pdfpageheight=297mm
-   \pdfpagewidth=210mm
+\pdfpageheight=297mm
+\pdfpagewidth=210mm
 \else
-   \setlength{\paperheight}{297mm}
-   \setlength{\paperwidth}{210mm}
+\setlength{\paperheight}{297mm}
+\setlength{\paperwidth}{210mm}
 \fi
 
 \setlength{\hoffset}{0.00cm}
@@ -226,8 +226,8 @@
 
 \addtolength{\headheight}{0.5pt}
 \fancypagestyle{plain}{
-  \fancyhead{}
-  \renewcommand{\headrulewidth}{0pt}
+    \fancyhead{}
+    \renewcommand{\headrulewidth}{0pt}
 }
 
 
@@ -326,158 +326,158 @@
 % These macros define an environment for front matter that is always 
 % single column even in a double-column document.
 \newenvironment{alwayssingle}{%
-       \@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
-       \else\newpage\fi}
-       {\if@restonecol\twocolumn\else\newpage\fi}
+    \@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
+    \else\newpage\fi}
+{\if@restonecol\twocolumn\else\newpage\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %            PORTADA de la UMSNH                                                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\maketitle}{%
-\ifposgrado
-	\begin{alwayssingle}
-	\thispagestyle{empty}	
-	\begin{center}
-	\includegraphics[height=3cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[8mm]
-	{\bfseries UNIVERSIDAD~MICHOACANA~DE~SAN~NICOLÁS~DE~HIDALGO}\\
-	{\MakeUppercase {\@programa}}\\
-	{\MakeUppercase {\@campo}}\\[20mm]
-	{\Large \scshape {\@title}} \\[20mm]
-	TESIS\\
-	QUE PARA OPTAR POR EL GRADO DE:\\
-	{\Large \scshape {\@degree}}\\[20mm]
-	PRESENTA:\\
-	{\Large \scshape {\@author}}\\[18mm]
-	TUTOR PRINCIPAL\\
-	{\Large \scshape {\@director}}\\
-	\ifcomite
-		COMITÉ TUTOR\\
-		{\Large \scshape {\@ctutoruno}}\\
-		{\Large \scshape {\@ctutordos}}\\[10mm]
-		{\MakeUppercase {\@lugar}}{, }{\MakeUppercase {\@degreedate}}
-	\else
-		\vspace{20mm}
-		{\MakeUppercase {\@lugar}}{, }{\MakeUppercase {\@degreedate}}
-	\fi	
-	\end{center}
-	\end{alwayssingle}
-	
-	\newpage
-	\thispagestyle{empty}~
-	
-		
-	\newpage
-	\begin{alwayssingle}
-	\thispagestyle{empty}
-	\vspace{30mm}
-
-	\noindent JURADO ASIGNADO:
-	\vspace{8mm}
-
-	\begin{tabbing}
-	Presidente: \ \ \ \ \ \ \ \= {\@presidente}\\ [3mm]
-	Secretario: \> {\@secretario}\\ [3mm]
-	Vocal: \> {\@vocal}\\ [3mm]
-	1er. Suplente: \> {\@supuno}\\ [3mm]
-	2o. Suplente: \> {\@supdos}\\ [12mm]
-	\end{tabbing}
-	La tesis se realizó en {\@institucion}.
-	\vspace{15mm}
-
-	\begin{center}
-	TUTOR DE TESIS:\\[4mm]
-	{\@director}\\[20mm]
-	---------------------------------------------------------\\
-	\end{center}
-	%\newpage
-	\vfill
-	\end{alwayssingle}
-	
-
-\else
-	\begin{alwayssingle}
-	\begin{center}
-	\thispagestyle{empty}
-	%% Barra izquierda - Escudos
-	\hskip -2cm
-	\begin{minipage}[c][10cm][s]{3cm}
-	  \begin{center}
-	    \ifportada
-	        \includegraphics[height=2.2cm]{Latex/Classes/Escudos/unam_azul}\\[10pt]
-    	    \hskip2pt\colorvrule{Azul}{2.5pt}{13cm}
-        	\hskip -0.4mm
-	        \colorvrule{Oro}{1pt}{13cm}\\[10pt]
-	        \includegraphics[height=2.6cm]{\@escudofacultad}
-	    \else
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fesa}\\[10pt]
-	        \hskip2pt\vrule width2.5pt height13cm
-    	    \hskip1mm
-	        \vrule width1pt height13cm\\[10pt]
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}
-	    \fi
+    \ifposgrado
+    \begin{alwayssingle}
+        \thispagestyle{empty}	
+        \begin{center}
+            \includegraphics[height=3cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[8mm]
+            {\bfseries UNIVERSIDAD~MICHOACANA~DE~SAN~NICOLÁS~DE~HIDALGO}\\
+            {\MakeUppercase {\@programa}}\\
+            {\MakeUppercase {\@campo}}\\[20mm]
+            {\Large \scshape {\@title}} \\[20mm]
+            TESIS\\
+            QUE PARA OPTAR POR EL GRADO DE:\\
+            {\Large \scshape {\@degree}}\\[20mm]
+            PRESENTA:\\
+            {\Large \scshape {\@author}}\\[18mm]
+            TUTOR PRINCIPAL\\
+            {\Large \scshape {\@director}}\\
+            \ifcomite
+            COMITÉ TUTOR\\
+            {\Large \scshape {\@ctutoruno}}\\
+            {\Large \scshape {\@ctutordos}}\\[10mm]
+            {\MakeUppercase {\@lugar}}{, }{\MakeUppercase {\@degreedate}}
+            \else
+            \vspace{20mm}
+            {\MakeUppercase {\@lugar}}{, }{\MakeUppercase {\@degreedate}}
+            \fi	
+        \end{center}
+    \end{alwayssingle}
     
-	  \end{center}
-	\end{minipage}\quad
-	%% Barra derecha - Títulos
-	\begin{minipage}[c][9.5cm][s]{12cm}
-	  \begin{center}
-    	% Barra superior
-	    {\large \scshape Universidad Nacional Autónoma de México}
-    	\vspace{.3cm}
-	    \ifportada
-        	%\hrule height2.5pt
-    	    \colorhrule{Azul}{2.5pt}
-	        \vspace{.1cm}
-        	%\hrule height1pt
-    	    \colorhrule{Oro}{1pt}
-	    \else
-       	 	\hrule height2.5pt
-        	\vspace{.1cm}
-       	 	\hrule height1pt
-    	\fi
-    	\vspace{.3cm}
-    	{\scshape  \@facultad}
+    \newpage
+    \thispagestyle{empty}~
+    
+    
+    \newpage
+    \begin{alwayssingle}
+        \thispagestyle{empty}
+        \vspace{30mm}
+        
+        \noindent JURADO ASIGNADO:
+        \vspace{8mm}
+        
+        \begin{tabbing}
+            Presidente: \ \ \ \ \ \ \ \= {\@presidente}\\ [3mm]
+            Secretario: \> {\@secretario}\\ [3mm]
+            Vocal: \> {\@vocal}\\ [3mm]
+            1er. Suplente: \> {\@supuno}\\ [3mm]
+            2o. Suplente: \> {\@supdos}\\ [12mm]
+        \end{tabbing}
+        La tesis se realizó en {\@institucion}.
+        \vspace{15mm}
+        
+        \begin{center}
+            TUTOR DE TESIS:\\[4mm]
+            {\@director}\\[20mm]
+            ---------------------------------------------------------\\
+        \end{center}
+        %\newpage
+        \vfill
+    \end{alwayssingle}
+    
+    
+    \else
+    \begin{alwayssingle}
+        \begin{center}
+            \thispagestyle{empty}
+            %% Barra izquierda - Escudos
+            \hskip -2cm
+            \begin{minipage}[c][10cm][s]{3cm}
+                \begin{center}
+                    \ifportada
+                    \includegraphics[height=2.2cm]{Latex/Classes/Escudos/unam_azul}\\[10pt]
+                    \hskip2pt\colorvrule{Azul}{2.5pt}{13cm}
+                    \hskip -0.4mm
+                    \colorvrule{Oro}{1pt}{13cm}\\[10pt]
+                    \includegraphics[height=2.6cm]{\@escudofacultad}
+                    \else
+                    \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fesa}\\[10pt]
+                    \hskip2pt\vrule width2.5pt height13cm
+                    \hskip1mm
+                    \vrule width1pt height13cm\\[10pt]
+                    \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}
+                    \fi
+                    
+                \end{center}
+            \end{minipage}\quad
+            %% Barra derecha - Títulos
+            \begin{minipage}[c][9.5cm][s]{12cm}
+                \begin{center}
+                    % Barra superior
+                    {\large \scshape Universidad Nacional Autónoma de México}
+                    \vspace{.3cm}
+                    \ifportada
+                    %\hrule height2.5pt
+                    \colorhrule{Azul}{2.5pt}
+                    \vspace{.1cm}
+                    %\hrule height1pt
+                    \colorhrule{Oro}{1pt}
+                    \else
+                    \hrule height2.5pt
+                    \vspace{.1cm}
+                    \hrule height1pt
+                    \fi
+                    \vspace{.3cm}
+                    {\scshape  \@facultad}
+                    
+                    \vspace{.3cm}
+                    
+                    
+                    % Título del trabajo
+                    %\vspace{3cm}
+                    \vspace{2.5cm}	
+                    
+                    {\Large \scshape {\@title}}
+                    
+                    \vspace{3cm}
+                    
+                    % Tipo de trabajo
+                    \makebox[8cm][s]{\Huge T E S I S}\\[8pt]
+                    QUE PARA OPTAR POR EL GRADO DE:\\[5pt]
+                    \textbf{{\@degree}}\\[40pt]
+                    PRESENTA:\\[5pt]
+                    \textbf{{\@author}}
+                    
+                    \vspace{1.5cm}
+                    
+                    {\small DIRECTOR:\\ {\@director}}
+                    
+                    \vspace{0.5cm}
+                    
+                    %{\small TUTOR:\\ {\@tutor}}
+                    
+                    \vspace{1cm}
+                    
+                    {\@lugar}{, }{\@degreedate}
+                    
+                \end{center}
+            \end{minipage}
+            
+        \end{center}
+        \null\vfill
+    \end{alwayssingle}
+    \fi
+}
 
-    	\vspace{.3cm}
-
-
-	    % Título del trabajo
-    	%\vspace{3cm}
-		\vspace{2.5cm}	
-	
-    	{\Large \scshape {\@title}}
-
-	    \vspace{3cm}
-
-	    % Tipo de trabajo
-	    \makebox[8cm][s]{\Huge T E S I S}\\[8pt]
-	    QUE PARA OPTAR POR EL GRADO DE:\\[5pt]
-    	\textbf{{\@degree}}\\[40pt]
-	    PRESENTA:\\[5pt]
-	    \textbf{{\@author}}
-
-	    \vspace{1.5cm}
-
-    	{\small DIRECTOR:\\ {\@director}}
-
-	    \vspace{0.5cm}
-
-    	%{\small TUTOR:\\ {\@tutor}}
-
-	    \vspace{1cm}
-
-	    {\@lugar}{, }{\@degreedate}
-
-	  \end{center}
-	\end{minipage}
-
-	\end{center}
-	\null\vfill
-	\end{alwayssingle}
-	\fi
-	}
-	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -491,12 +491,12 @@
 
 \newenvironment{dedication}
 {\begin{alwayssingle}
-  \pagestyle{empty}
-  \vspace*{1.5cm}
-  {\large{}}
-  \vspace{0.5cm}
-  \begin{flushright}\itshape}
-{\end{flushright} \end{alwayssingle}}
+        \pagestyle{empty}
+        \vspace*{1.5cm}
+        {\large{}}
+        \vspace{0.5cm}
+        \begin{flushright}\itshape}
+        {\end{flushright} \end{alwayssingle}}
 
 
 % ACKNOWLEDGEMENTS
@@ -508,11 +508,11 @@
 
 \newenvironment{acknowledgements}
 {\pagestyle{empty}
-\begin{alwayssingle}
-\vspace*{1.5cm}
-{\chapter*{Reconocimientos}}
-\vspace{0.5cm}}
-{\end{alwayssingle}}
+    \begin{alwayssingle}
+        \vspace*{1.5cm}
+        {\chapter*{Reconocimientos}}
+        \vspace{0.5cm}}
+    {\end{alwayssingle}}
 
 % The acknowledgementslong environment puts a large, bold, centered
 % "Acknowledgements" label at the top of the page. The acknowledgement itself
@@ -520,11 +520,11 @@
 
 \newenvironment{acknowledgementslong}
 {\pagestyle{empty}
-\begin{alwayssingle}
-\vspace*{1.5cm}
-{\chapter*{Reconocimientos}}
-\vspace{0.5cm}}
-{\end{alwayssingle}}
+    \begin{alwayssingle}
+        \vspace*{1.5cm}
+        {\chapter*{Reconocimientos}}
+        \vspace{0.5cm}}
+    {\end{alwayssingle}}
 
 %ABSTRACT
 %
@@ -533,53 +533,53 @@
 %i.e. tabbed in at both sides, and on its own page.
 
 \newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{empty}
-  \begin{center}
-  \vspace*{1.5cm}
-  {\chapter*{Resumen}}
-  \end{center}
-  \vspace{0.5cm}}
-{\end{alwayssingle}}
+        \begin{center}
+            \vspace*{1.5cm}
+            {\chapter*{Resumen}}
+        \end{center}
+        \vspace{0.5cm}}
+    {\end{alwayssingle}}
 
 %The abstractlong environment puts a large, bold, centered "Abstract" label at
 %the top of the page. The abstract itself does not appears in a quote
 %environment so you can get more in.
 
 \newenvironment{abstractslong} {\begin{alwayssingle} \pagestyle{empty}
-  \begin{center}
-  \vspace*{1.5cm}
-  {\chapter*{Resumen}}
-  \end{center}
-  \vspace{0.5cm}}
-{\end{alwayssingle}}
+        \begin{center}
+            \vspace*{1.5cm}
+            {\chapter*{Resumen}}
+        \end{center}
+        \vspace{0.5cm}}
+    {\end{alwayssingle}}
 
 %The abstractseparate environment is for running of a page with the abstract
 %on including title and author etc as required to be handed in separately
 
 \newenvironment{abstractseparate} {\begin{alwayssingle} \pagestyle{empty}
-  \vspace*{-1in}
- \begin{center}
-    { \Large {\bfseries {\@title}} \par}
-    {{\large \vspace*{1ex} \@author} \par}
-{\large \vspace*{1ex}
-    {{UNAM} \par}
-    {{Facultad de Ingeniería} \par}
-\vspace*{1ex}
-    {{\it \submittedtext} \par}
-    {\it {\@degree} \par}
-\vspace*{2ex}
-    {\@degreedate}}
-  \end{center}}
-{\end{alwayssingle}}
+        \vspace*{-1in}
+        \begin{center}
+            { \Large {\bfseries {\@title}} \par}
+            {{\large \vspace*{1ex} \@author} \par}
+            {\large \vspace*{1ex}
+                {{UNAM} \par}
+                {{Facultad de Ingeniería} \par}
+                \vspace*{1ex}
+                {{\it \submittedtext} \par}
+                {\it {\@degree} \par}
+                \vspace*{2ex}
+                {\@degreedate}}
+    \end{center}}
+    {\end{alwayssingle}}
 
 %Statement of originality if required
 
 \newenvironment{declaration} {\begin{alwayssingle} \pagestyle{empty}
-  \begin{center}
-  \vspace*{1.5cm}
-  {\chapter*{Declaración de autenticidad}}
-  \end{center}
-  \vspace{0.5cm}}
-{\vspace{1.5cm}\flushright{\@author. \@lugar, \@degreedate}\end{alwayssingle}}
+        \begin{center}
+            \vspace*{1.5cm}
+            {\chapter*{Declaración de autenticidad}}
+        \end{center}
+        \vspace{0.5cm}}
+    {\vspace{1.5cm}\flushright{\@author. \@lugar, \@degreedate}\end{alwayssingle}}
 
 
 %:-------------------------- page numbers: roman+arabic -----------------------
