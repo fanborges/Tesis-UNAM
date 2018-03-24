@@ -10,7 +10,7 @@ UNAM's Thesis' LaTeX template.
 Based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge (http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/).
 Corrected and extended in 2007 by Jakob Suckale, then MPI-iCBG PhD programme
 and made available through OpenWetWare.org - the free biology wiki. Adapted to UNAM by Jesús Velázquez"
-![portada](./portada.png)
+![portada](https://cdn.rawgit.com/fanborges/Tesis-UNAM/historia/portada.png)
 
 ## Notas de instalación
 
