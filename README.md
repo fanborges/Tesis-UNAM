@@ -9,21 +9,20 @@ UNAM's Thesis' LaTeX template.
 
 Based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge (http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/).
 Corrected and extended in 2007 by Jakob Suckale, then MPI-iCBG PhD programme
-and made available through OpenWetWare.org - the free biology wiki. Adapted to UNAM by Jesús Velázquez
-
+and made available through OpenWetWare.org - the free biology wiki. Adapted to UNAM by Jesús Velázquez"
+![portada](./portada.png)
 
 ## Notas de instalación
 
+1. Instalar alguna distribución TeX/LaTeX como [TEXLIVE](https://www.tug.org/texlive/) o [MiKTeX](https://miktex.org/), yo
+particularmente recomiendo la segunda.
 
+2. Instalar un editor de LaTeX. En el mercado existen muchos que son de libre distribución y son realmente buenos. Revisa [esta
+comparativa](https://en.wikipedia.org/wiki/Comparison_of_TeX_editors) y elige el que mejor se ajuste a tus preferencias. Por facilidad de
+uso y estabilidad, yo recomiendo [TeXStudio](http://texstudio.sourceforge.net/)
 
-
-
-
-
-
-
-
-
+3. Abrir y editar el archivo [tesis.tex](./tesis.tex) que es el que contiene los datos principales del tesista, así como las preferencias
+de bibliografía y los **includes** de las carpetas con los respectivos capítulos que conformarán el documento de tesis.
 
 Lista de paquetes
 -----------------
